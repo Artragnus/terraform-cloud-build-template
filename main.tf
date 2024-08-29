@@ -37,7 +37,9 @@ resource "google_project_iam_custom_role" "cloud_build_deployer-role" {
     "logging.logEntries.create", 
     "logging.logEntries.route", 
     "resourcemanager.projects.get",
-    "resourcemanager.projects.getIamPolicy"
+    "resourcemanager.projects.getIamPolicy",
+    "run.services.getIamPolicy",
+    "run.services.setIamPolicy"
   ]
 }
 
