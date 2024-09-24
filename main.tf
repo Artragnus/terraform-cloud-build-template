@@ -47,7 +47,8 @@ resource "google_project_iam_custom_role" "cloud_build_deployer-role" {
     "resourcemanager.projects.get",
     "resourcemanager.projects.getIamPolicy",
     "run.services.getIamPolicy",
-    "run.services.setIamPolicy"
+    "run.services.setIamPolicy",
+    "secretmanager.versions.access"
   ]
 }
 
