@@ -6,7 +6,6 @@ variable "project_id" {
 variable "region" {
   description = "The region to deploy resources into"
   type = string
-  default = "us-central1"
 }
 
 variable "github_token" {
@@ -46,7 +45,6 @@ variable "trigger_name" {
 variable "github_organization" {
   description = "The GitHub organization"
   type = string
-  default = "default-organization"
 }
 
 variable "gcp_service_list" {
