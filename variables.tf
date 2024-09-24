@@ -48,3 +48,9 @@ variable "github_organization" {
   type = string
   default = "default-organization"
 }
+
+variable "gcp_service_list" {
+  description = "The list of GCP services to enable"
+  type = list(string)
+  default=["secretmanager.googleapis.com", "logging.googleapis.com", "cloudfunctions.googleapis.com", "artifactregistry.googleapis.com", "cloudbuild.googleapis.com", "pubsub.googleapis.com", "iam.googleapis.com", "serviceusage.googleapis.com", "iamcredentials.googleapis.com", "cloudresourcemanager.googleapis.com"]
+}

@@ -21,6 +21,14 @@ provider "github" {
   token = var.github_token
 }
 
+resource "google_project_service" "enable_apis" {
+  project = var.project_id
+  for_each = toset(var.gcp_service_list)
+  service = each.key
+  disable_dependent_services = true
+  disable_on_destroy = true
+}
+
 resource "google_project_iam_custom_role" "cloud_build_deployer-role" {
   project = var.project_id
   role_id     = "cloud_build_deployer"
