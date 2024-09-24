@@ -2,12 +2,13 @@
 
 Esse template prepara o ambiente para um deploy continuo, criando um trigger no cloud build conectado a um repositório remoto. A seguir irei listar os passos da criação.
 
+- Habilita as APIs necessárias do projeto
 - Criação da custom role com as permissões mínimas necessárias.
 - Criação da service account que será utilizada no cloud build.
 - Adiciona a service account ao projeto.
 - Cria a secret para armazenar o token do github.
 - Armazena o valor do token dentro da secret.
-- Da a permissão necessária a conta de serviço padrão do cloud build para acessar a secret.
+- Atribui a permissão necessária a conta de serviço padrão do cloud build para acessar a secret.
 - Cria policy para controle de acesso a secret.
 - Cria a conexão com o github e cloud build.
 - Adiciona o repositório a instalação do github.
